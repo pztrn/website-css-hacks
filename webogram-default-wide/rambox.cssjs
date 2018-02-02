@@ -1,0 +1,8 @@
+function cssEngine(rule) {
+    var css = document.createElement('style');
+    css.type = 'text/css';
+    css.appendChild(document.createTextNode(rule));
+    document.getElementsByTagName('head')[0].appendChild(css);
+}
+
+cssEngine(' .tg_head_split, .im_page_wrap, .im_message_wrap, .im_send_panel_wrap, .im_send_form, .tg_head_peer_title {  max-width: 100% !important; }  .im_dialogs_col_wrap, .tg_head_logo_wrap {  width: 18%; }  .im_history_col_wrap, .tg_head_main_wrap {  width: 82%; } ');
