@@ -1,329 +1,372 @@
-@-moz-document domain("web.telegram.org")
-{
-  /* Whole site things. */
-  html {
-    background-color: #333c4a;
-    color: #cccccc;
-    font-family: "Play", "Open Sans", sans, Arial;
-  }
-  
-  * {
-    font-family: "Play", "Open Sans", sans, Arial;
-  }
-  
-  /* Elements width */
-  .tg_head_split, .im_page_wrap, .im_message_wrap, .im_send_panel_wrap, .im_send_form, .tg_head_peer_title {
-    max-width: 100% !important;
-  }
-  
-  /* Dialogs list */
-  .im_dialogs_col_wrap {
-    background-color: #455164;
-    border-right: 1px solid #455164;
-  }
-  
-  /* Width of dialog list and header logo div. */
-  .im_dialogs_col_wrap, .tg_head_logo_wrap {
-    width: 18%;
-  }
-   
-  /* Main chat area width */
-  .im_history_col_wrap, .tg_head_main_wrap {
-    width: 82%;
-  }
-  
-  /* Global fonts and sizes */
-  body {
-    font-family: "Go Sans", "Helvetica Neue", "Play", "Open Sans", Serif, Arial !important;
-    font-size: 1.4em !important;
-  }
-  
-  /* Remove borders from page wrap. */
-  .im_page_wrap {
-    border: none;
-  }
-  
-  /* Links */
-  a {
-    color: #7ec8f0;
-  }
-  
-  a:hover {
-    color: #7fafef;
-  }
-  
-  /* Logo */
-  .tg_head_logo_wrap, .tg_head_main_wrap, .tg_head_split  {
-    background-color: #455164;
-  }
-  
-  .icon-tg-title {
-    background-image: none;
-  }
-  
-  .icon-tg-title:after {
-    content: "Telegram";
-    font-style: normal;
-  }
-  
-  a.tg_head_btn.dropdown-toggle:hover, a.tg_head_btn:hover, .dropdown.open .tg_head_btn, .tg_head_btn:hover {
-    background-color: #677386;
-  }
-  
-  /* Dropdown menus */
-  .dropdown-menu {
-    background-color: #455164;
-    border: none;
-    color: #cccccc;
-  }
-  
-  .tg_head_logo_dropdown .dropdown-menu {
-    border: none;
-  }
-  
-  .tg_head_logo_dropdown .dropdown-menu > li > a, .tg_head_peer_dropdown .dropdown-menu > li > a {
-    color: #7ec8f0;
-  }
-  
-  .tg_head_logo_dropdown .dropdown-menu > li > a:hover, .tg_head_peer_dropdown .dropdown-menu > li > a:hover {
-    background-color: #677386;
-    color: #7fafef;
-  }
-  
-  /* Search field */
-  .is_2x .im_dialogs_search_field {
-    background: none;
-    background-color: #2e3642;
-    color: #cccccc;
-  }
-  
-  /* Selected dialog in dialogs list. */
-  .im_dialogs_scrollable_wrap .active a.im_dialog, .im_dialogs_scrollable_wrap a.im_dialog_searchpeer, .im_dialogs_scrollable_wrap a.im_dialog_searchpeer:hover, .im_dialogs_scrollable_wrap 
-a.im_dialog_searchpeer_selected {
-    background-color: #566275;
-  }
-  
-  /* ...hovered */
-  .im_dialogs_scrollable_wrap .active a.im_dialog:hover, .im_dialogs_scrollable_wrap a.im_dialog:hover, .im_dialogs_scrollable_wrap a.im_dialog_selected {
-    background-color: #677386;
-  }
-  
-  /* Peer name in dialogs list. */
-  .im_dialog_peer {
-    color: #cccccc;
-  }
-  
-  /* Last peer message in dialogs list */
-  .im_dialog_message, a.im_dialog .im_short_message_text, a.im_dialog:hover .im_short_message_text {
-    color: #cccccc;
-  }
-  
-  /* Badges */
-  .im_dialog_badge {
-    background: #8ea7cf;
-  }
-  
-  /* Muted dialog badge */
-  .im_dialog_badge_muted {
-    background: #788497;
-  }
-  
-  a.im_dialog .im_dialog_chat_from_wrap, a.im_dialog .im_short_message_media, a.im_dialog .im_short_message_service {
-    color: #dddddd;
-  }
-  
-  /* Input field overrides */
-  .composer_rich_textarea, .composer_textarea {
-    color: #cccccc;
-    font-family: "Go Sans", "Helvetica Neue", "Play", "Open Sans", Serif, Arial;
-    font-size: inherit;
-  }
-  
-  /* Chat header line (right of webogram logo) font size override */
-  .tg_head_btn, .im_message_text {
-    font-size: inherit;
-  }
-  
-  /* Chat history */
-  .im_history_col, .im_page_peer_not_selected {
-    background-color: #333c4a;
-    color: #cccccc;
-  }
-  
-  .im_history_empty, .im_history_not_selected {
-    font-size: inherit;
-  }
-  
-  /* Push messages to right */
-  .im_content_message_wrap, .im_grouped_short .im_content_message_wrap {
-    margin: 8px 10px 8px 30px;
-  }
-  
-  /* Message author */
-  .im_message_author, .im_message_fwd_author {
-    color: #fe72df;
-  }
-  
-  /* Selected message */
-  .im_message_selected .im_message_outer_wrap {
-    background-color: #566275;
-  }
-  
-  /* Selected hovered message */
-  .im_history_select_active .im_history_message_wrap:hover .hasselect {
-    background-color: #677386;
-  }
-  
-  /* Unseen message status */
-  .icon-message-status {
-    background-color: #a4c4dd;
-  }
-  
-  /* Unread messages */
-  .im_message_unread_split {
-    background-color: #455164;
-  }
-  
-  /* User mention */
-  .im_message_mymention {
-    background-color: transparent;
-  }
-  
-  /* Get rid of default background picture. Those idiots should die in fire! */
-  i.icon.icon-select-tick {
-    background: none !important;
-    color: "#cccccc" !important;
-    margin-left: -40px !important;
-  }
-  
-  /* Replace message selection (and hover) mark with UTF character that can actually be colored */
-  i.icon.icon-select-tick:after
-  {
-    /* content: "\2713";*/
-    content: "√";
-    font-size: 1.5em;
-  }
-  
-  /* Line height for chat area */
-  .im_message_text {
-    line-height: 1.1em;
-  }
-  
-  /* Input area */
-  .im_send_field_wrap {
-    border: 1px solid #3f4753;
-    box-shadow: none;
-    padding-bottom: 0px;
-  }
-  
-  .im_bottom_panel_wrap {
-    background-color: #2e3642;
-  }
-  
-  /* NO background for voice record button */
-  .im_record {
-    background: none;
-  }
-  
-  /* Emoji button */
-  a.composer_emoji_btn:hover {
-    background-color: #677386;
-  }
-  
-  /* Submit button */
-  .im_submit {
-    color: #8ea7cf;
-  }
-  
-  .im_submit:hover {
-    color: #afc9ef;
-  }
-  
-  /* Users colors */
-  .user_color_1,.user_color_1:hover{color:#f7adf7}
-  .user_color_2,.user_color_2:hover{color:#abf99f}
-  .user_color_3,.user_color_3:hover{color:#86efdc}
-  .user_color_4,.user_color_4:hover{color:#b76ee5}
-  .user_color_5,.user_color_5:hover{color:#f9a4b3}
-  .user_color_6,.user_color_6:hover{color:#f7999a}
-  .user_color_7,.user_color_7:hover{color:#f497b9}
-  .user_color_8,.user_color_8:hover{color:#f9a9d7}
-  
-  /* Reply text user color */
-  .im_message_reply_author {
-    color: #b76ee5
-  }
-  
-  /* Code */
-  pre, code {
-    background-color: #242A33;
-    border: none;
-    border-radius: 0px;
-    color: #cccccc;
-    font-family: "Go Mono", Menlo, Monaco, SF Mono, monospace;
-    font-size: 0.9em;
-    padding: 1px;
-  }
-  
-  /* Perfect replies */
-  .im_message_reply_border {
-    background: none;
-    padding-left: 5px;
-  }
-  
-  .im_message_reply_border:after {
-    content: ">";
-    font-size: 1.7em;
-  }
-  
-  .im_message_reply {
-    background-color: #242A33;
-    border-radius: 4px;
-    padding: 10px;
-  }
-  
-  .im_message_reply_author, .im_message_reply_body {
-    padding-left: 10px;
-  }
-  
-  /* Go to quoted message highlight */  
-  @keyframes im_message_focus_fade{from{background-color:#677386}}
-  
-  /* Buttons */
-  .btn-primary {
-    background-color: #455164;
-  }
-  
-  .btn-primary:hover {
-    background-color: #677386;
-  }
-  
-  /* Modals */
-  .md_modal_wrap {
-    background-color: #677386;
-    color: #cccccc;
-  }
-  
-  .md_modal_head {
-    background-color: #455164;
-  }
-  
-  .md_modal_section_param_wrap .md_modal_section_param_name {
-    color: #eeeeee;
-  }
-  
-  /* Phone icon. */
-  .is_2x .md_modal_section_icon, .md_modal_section_icon {
-    background-image: none;
-  }
-  
-  /* Notifications checkbox. */
-  a.tg_checkbox, p.tg_checkbox {
-    color: #cccccc;
-  }
-  
-  /* Bot intro message */
-  .im_bot_intro_message_wrap {
-    color: #cccccc;
-  }
+@-moz-document domain("web.telegram.org") {
+    /* Whole site things. */
+    
+    html {
+        background-color: #333c4a;
+        color: #cccccc;
+        font-family: "Go", "Play", "Open Sans", sans, Arial;
+    }
+    
+    * {
+        font-family: "Go", "Play", "Open Sans", sans, Arial;
+    }
+    /* Elements width */
+    
+    .tg_head_split,
+    .im_page_wrap,
+    .im_message_wrap,
+    .im_send_panel_wrap,
+    .im_send_form,
+    .tg_head_peer_title {
+        max-width: 100% !important;
+    }
+    /* Dialogs list */
+    
+    .im_dialogs_col_wrap {
+        background-color: #455164;
+        border-right: 1px solid #455164;
+    }
+    /* Width of dialog list and header logo div. */
+    
+    .im_dialogs_col_wrap,
+    .tg_head_logo_wrap {
+        width: 18%;
+    }
+    /* Main chat area width */
+    
+    .im_history_col_wrap,
+    .tg_head_main_wrap {
+        width: 82%;
+    }
+    /* Global fonts and sizes */
+    
+    body {
+        font-family: "Go", "Go Sans", "Helvetica Neue", "Play", "Open Sans", Serif, Arial !important;
+        font-size: 1.34em !important;
+    }
+    /* Remove borders from page wrap. */
+    
+    .im_page_wrap {
+        border: none;
+    }
+    /* Links */
+    
+    a {
+        color: #7ec8f0;
+    }
+    a:hover {
+        color: #7fafef;
+    }
+    /* Logo */
+    
+    .tg_head_logo_wrap,
+    .tg_head_main_wrap,
+    .tg_head_split {
+        background-color: #455164;
+    }
+    .icon-tg-title {
+        background-image: none;
+    }
+    .icon-tg-title:after {
+        content: "Telegram";
+        font-style: normal;
+    }
+    a.tg_head_btn.dropdown-toggle:hover,
+    a.tg_head_btn:hover,
+    .dropdown.open .tg_head_btn,
+    .tg_head_btn:hover {
+        background-color: #677386;
+    }
+    /* Dropdown menus */
+    
+    .dropdown-menu {
+        background-color: #455164;
+        border: none;
+        color: #cccccc;
+    }
+    .tg_head_logo_dropdown .dropdown-menu {
+        border: none;
+    }
+    .tg_head_logo_dropdown .dropdown-menu > li > a,
+    .tg_head_peer_dropdown .dropdown-menu > li > a {
+        color: #7ec8f0;
+    }
+    .tg_head_logo_dropdown .dropdown-menu > li > a:hover,
+    .tg_head_peer_dropdown .dropdown-menu > li > a:hover {
+        background-color: #677386;
+        color: #7fafef;
+    }
+    /* Search field */
+    
+    .is_2x .im_dialogs_search_field {
+        background: none;
+        background-color: #2e3642;
+        color: #cccccc;
+    }
+    /* Selected dialog in dialogs list. */
+    
+    .im_dialogs_scrollable_wrap .active a.im_dialog,
+    .im_dialogs_scrollable_wrap a.im_dialog_searchpeer,
+    .im_dialogs_scrollable_wrap a.im_dialog_searchpeer:hover,
+    .im_dialogs_scrollable_wrap a.im_dialog_searchpeer_selected {
+        background-color: #566275;
+    }
+    /* ...hovered */
+    
+    .im_dialogs_scrollable_wrap .active a.im_dialog:hover,
+    .im_dialogs_scrollable_wrap a.im_dialog:hover,
+    .im_dialogs_scrollable_wrap a.im_dialog_selected {
+        background-color: #677386;
+    }
+    /* Peer name in dialogs list. */
+    
+    .im_dialog_peer {
+        color: #cccccc;
+    }
+    /* Last peer message in dialogs list */
+    
+    .im_dialog_message,
+    a.im_dialog .im_short_message_text,
+    a.im_dialog:hover .im_short_message_text {
+        color: #cccccc;
+    }
+    /* Badges */
+    
+    .im_dialog_badge {
+        background: #8ea7cf;
+    }
+    /* Muted dialog badge */
+    
+    .im_dialog_badge_muted {
+        background: #788497;
+    }
+    a.im_dialog .im_dialog_chat_from_wrap,
+    a.im_dialog .im_short_message_media,
+    a.im_dialog .im_short_message_service {
+        color: #dddddd;
+    }
+    /* Input field overrides */
+    
+    .composer_rich_textarea,
+    .composer_textarea {
+        color: #cccccc;
+        font-family: "Go", "Go Sans", "Helvetica Neue", "Play", "Open Sans", Serif, Arial;
+        font-size: inherit;
+    }
+    /* Chat header line (right of webogram logo) font size override */
+    
+    .tg_head_btn,
+    .im_message_text {
+        font-size: inherit;
+    }
+    /* Chat history */
+    
+    .im_history_col,
+    .im_page_peer_not_selected {
+        background-color: #333c4a;
+        color: #cccccc;
+    }
+    .im_history_empty,
+    .im_history_not_selected {
+        font-size: inherit;
+    }
+    /* Push messages to right */
+    
+    .im_content_message_wrap,
+    .im_grouped_short .im_content_message_wrap {
+        margin: 8px 10px 8px 30px;
+    }
+    /* Message author */
+    
+    .im_message_author,
+    .im_message_fwd_author {
+        color: #fe72df;
+    }
+    /* Selected message */
+    
+    .im_message_selected .im_message_outer_wrap {
+        background-color: #566275;
+    }
+    /* Selected hovered message */
+    
+    .im_history_select_active .im_history_message_wrap:hover .hasselect {
+        background-color: #677386;
+    }
+    /* Unseen message status */
+    
+    .icon-message-status {
+        background-color: #a4c4dd;
+    }
+    /* Unread messages */
+    
+    .im_message_unread_split {
+        background-color: #455164;
+    }
+    /* User mention */
+    
+    .im_message_mymention {
+        background-color: transparent;
+    }
+    /* Get rid of default background picture. Those idiots should die in fire! */
+    
+    i.icon.icon-select-tick {
+        background: none !important;
+        color: #cccccc !important;
+        margin-left: -40px !important;
+    }
+    /* Replace message selection (and hover) mark with UTF character that can actually be colored */
+    
+    i.icon.icon-select-tick:after {
+        /* content: "\2713";*/
+        
+        content: "√";
+        font-size: 1.5em;
+    }
+    /* Line height for chat area */
+    
+    .im_message_text {
+        line-height: 1.1em;
+    }
+    /* Input area */
+    
+    .im_send_field_wrap {
+        border: 1px solid #3f4753;
+        box-shadow: none;
+        padding-bottom: 0px;
+    }
+    .im_bottom_panel_wrap {
+        background-color: #2e3642;
+    }
+    /* NO background for voice record button */
+    
+    .im_record, .im_record_bg {
+        background: none !important;
+    }
+    /* Emoji button */
+    
+    a.composer_emoji_btn:hover {
+        background-color: #677386;
+    }
+    /* Submit button */
+    
+    .im_submit {
+        color: #8ea7cf;
+    }
+    .im_submit:hover {
+        color: #afc9ef;
+    }
+    /* Users colors */
+    
+    .user_color_1,
+    .user_color_1:hover {
+        color: #f7adf7
+    }
+    .user_color_2,
+    .user_color_2:hover {
+        color: #abf99f
+    }
+    .user_color_3,
+    .user_color_3:hover {
+        color: #86efdc
+    }
+    .user_color_4,
+    .user_color_4:hover {
+        color: #b76ee5
+    }
+    .user_color_5,
+    .user_color_5:hover {
+        color: #f9a4b3
+    }
+    .user_color_6,
+    .user_color_6:hover {
+        color: #f7999a
+    }
+    .user_color_7,
+    .user_color_7:hover {
+        color: #f497b9
+    }
+    .user_color_8,
+    .user_color_8:hover {
+        color: #f9a9d7
+    }
+    /* Reply text user color */
+    
+    .im_message_reply_author {
+        color: #b76ee5
+    }
+    /* Code */
+    
+    pre,
+    code {
+        background-color: #242A33;
+        border: none;
+        border-radius: 0px;
+        color: #cccccc;
+        font-family: "Go Mono", Menlo, Monaco, SF Mono, monospace;
+        font-size: 0.9em;
+        padding: 1px;
+    }
+    /* Perfect replies */
+    
+    .im_message_reply_border {
+        background: none;
+        padding-left: 5px;
+    }
+    .im_message_reply_border:after {
+        content: ">";
+        font-size: 1.7em;
+    }
+    .im_message_reply {
+        background-color: #242A33;
+        border-radius: 4px;
+        padding: 10px;
+    }
+    .im_message_reply_author,
+    .im_message_reply_body {
+        padding-left: 10px;
+    }
+    /* Go to quoted message highlight */
+    
+    @keyframes im_message_focus_fade {
+        from {
+            background-color: #677386
+        }
+    }
+    /* Buttons */
+    
+    .btn-primary {
+        background-color: #455164;
+    }
+    .btn-primary:hover {
+        background-color: #677386;
+    }
+    /* Modals */
+    
+    .md_modal_wrap {
+        background-color: #677386;
+        color: #cccccc;
+    }
+    .md_modal_head {
+        background-color: #455164;
+    }
+    .md_modal_section_param_wrap .md_modal_section_param_name {
+        color: #eeeeee;
+    }
+    /* Phone icon. */
+    
+    .is_2x .md_modal_section_icon,
+    .md_modal_section_icon {
+        background-image: none;
+    }
+    /* Notifications checkbox. */
+    
+    a.tg_checkbox,
+    p.tg_checkbox {
+        color: #cccccc;
+    }
+    /* Bot intro message */
+    
+    .im_bot_intro_message_wrap {
+        color: #cccccc;
+    }
 }
