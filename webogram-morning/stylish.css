@@ -255,6 +255,18 @@
     .im_submit:hover {
         color: #afc9ef;
     }
+    
+    /* Markup buttons */
+    .reply_markup_button {
+        background-color: #455164;
+    	color: #cccccc;                                        
+	}
+	
+	.reply_markup_button:hover {
+        background-color: #677386;
+		color: #cccccc;
+	}
+    
     /* Users colors */
     
     .user_color_1,
