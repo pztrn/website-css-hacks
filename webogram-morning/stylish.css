@@ -41,12 +41,13 @@
     /* Global fonts and sizes */
     
     body {
+		background-color: #2e3642;
         font-family: "Go", "Go Sans", "Helvetica Neue", "Play", "Open Sans", Serif, Arial !important;
         font-size: 1.34em !important;
     }
     /* Remove borders from page wrap. */
     
-    .im_page_wrap {
+    .im_page_wrap, .im_page_wrap:before, .im_page_wrap:after {
         border: none;
     }
     /* Links */
@@ -227,6 +228,11 @@
     .im_message_text {
         line-height: 1.1em;
     }
+	
+	/* Pinned messages */
+	.im_history_pinned_wrap {
+		border-bottom: 1px solid #3f4753;
+	}
     /* Input area */
     
     .im_send_field_wrap {
@@ -266,7 +272,16 @@
         background-color: #677386;
 		color: #cccccc;
 	}
+	
+	.reply_markup_button:focus {
+        background-color: #788497;
+		color: #cccccc;
+	}
     
+	/* Mute/Unmute things. */
+	.im_edit_panel_border {
+		border-bottom: none;
+	}
     /* Users colors */
     
     .user_color_1,
